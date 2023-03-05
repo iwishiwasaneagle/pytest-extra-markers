@@ -1,0 +1,58 @@
+# Copyright 2023 Jan-Hendrik Ewers
+# SPDX-License-Identifier: GPL-3.0-only
+
+name: CI
+
+on:
+    push:
+        branches: [master, dev]
+    pull_request:
+    workflow_dispatch:
+
+jobs:
+  run-tests:
+    name: Run tests
+    runs-on: ${{ matrix.platform }}
+    defaults:
+      run:
+        shell: bash -l {0}
+
+    strategy:
+      max-parallel: 1
+      matrix:
+        python-versioin: ["3.11", "3.10", "3.9"]
+        platform: ["ubuntu-latest", "windows-latest", "macos-latest"]
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        cache: "pip"
+        python-version: ${{ matrix.python-version }}
+        cache-dependency-path: |
+          **/requirements*.txt
+
+    - name: Install pytest-extra-markers
+      run: |
+        pip install -e ".[test]"
+
+    - name: Run tests
+      run: |
+        pytest tests \
+        --cov-report=xml \
+        --cov-branch \
+        --cov pytest-markers \
+        --cov-report term-missing
+
+    - name: Upload code test coverage report
+      uses: codecov/codecov-action@v3.1.1
+      if: ${{ (github.actor != 'dependabot[bot]') && ( !env.ACT ) }}
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        files: ./coverage.xml,./coverage.info
+        fail_ci_if_error: true

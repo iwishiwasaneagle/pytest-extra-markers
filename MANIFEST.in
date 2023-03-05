@@ -1,0 +1,4 @@
+include pyproject.toml requirements.txt setup.cfg setup.py LICENSE.txt README.md
+recursive-include src/*.py
+recursive-include tests/*.py
+exclude MANIFEST.in

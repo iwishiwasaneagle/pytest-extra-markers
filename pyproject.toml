@@ -1,0 +1,18 @@
+[build-system]
+# AVOID CHANGING REQUIRES: IT WILL BE UPDATED BY PYSCAFFOLD!
+requires = [
+    "scikit-build",
+    "setuptools>=46.1.0",
+    "setuptools_scm>=6.2",
+]
+
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+
+[tool.rstcheck]
+ignore_directives = [
+    "automodule",
+    "autoclass",
+]
+ignore_messages = "([dD]uplicate implicit|not referenced)"
