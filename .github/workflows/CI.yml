@@ -13,10 +13,6 @@ jobs:
   run-tests:
     name: Run tests
     runs-on: ${{ matrix.platform }}
-    defaults:
-      run:
-        shell: bash -l {0}
-
     strategy:
       max-parallel: 1
       matrix:
@@ -39,8 +35,8 @@ jobs:
 
     - name: Install pytest-extra-markers
       run: |
-        python${{ matrix.python-version }} -m pip install ".[test]"
+        python -m pip install ".[test]"
 
     - name: Run tests
       run: |
-        python${{ matrix.python-version }} -m pytest tests
+        python -m pytest tests
