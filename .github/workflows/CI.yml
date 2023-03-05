@@ -43,16 +43,4 @@ jobs:
 
     - name: Run tests
       run: |
-        pytest tests \
-        --cov-report=xml \
-        --cov-branch \
-        --cov pytest-markers \
-        --cov-report term-missing
-
-    - name: Upload code test coverage report
-      uses: codecov/codecov-action@v3.1.1
-      if: ${{ (github.actor != 'dependabot[bot]') && ( !env.ACT ) }}
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }}
-        files: ./coverage.xml,./coverage.info
-        fail_ci_if_error: true
+        pytest tests
