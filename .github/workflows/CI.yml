@@ -39,8 +39,8 @@ jobs:
 
     - name: Install pytest-extra-markers
       run: |
-        pip install ".[test]"
+        python${{ matrix.python-version }} -m pip install ".[test]"
 
     - name: Run tests
       run: |
-        pytest tests
+        python${{ matrix.python-version }} -m pytest tests
