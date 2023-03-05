@@ -96,7 +96,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: dist
-          path: pytest-extra-markers*.whl
+          path: pytest_extra_markers*.whl
 
   publish:
     name: Publish
