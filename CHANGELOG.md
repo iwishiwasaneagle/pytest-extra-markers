@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.1] - 2023-03-05
+
+### Bug Fixes
+
+- Fixed malformed project_urls [(164a6ed)](https://github.com/iwishiwasaneagle/pytest-extra-markers/commit/164a6ed105d9599e404374f0d084bb35ca128649)
+
 ## [1.0.0] - 2023-03-05
 
 ### Bug Fixes
@@ -29,6 +35,7 @@ All notable changes to this project will be documented in this file.
 - Update changelog for v1.0.0 [skip pre-commit.ci] [(c6542b1)](https://github.com/iwishiwasaneagle/pytest-extra-markers/commit/c6542b19d76209f7f58c705bc90c2addda53a104)
 - Update changelog for v1.0.0 [skip pre-commit.ci] [(6457158)](https://github.com/iwishiwasaneagle/pytest-extra-markers/commit/6457158cbd1c9cd14343b93306050321998715ce)
 - Delete changelog for redo of v1.0.0 [skip pre-commit.ci] [(3d571af)](https://github.com/iwishiwasaneagle/pytest-extra-markers/commit/3d571afb808929e8bb963f4463b21cb16d1d05a3)
+- Update changelog for v1.0.0 [skip pre-commit.ci] [(f2a6e37)](https://github.com/iwishiwasaneagle/pytest-extra-markers/commit/f2a6e377b2f5e6b6fde8e420211c18feac8fbf4f)
 
 ### Refactor
 
