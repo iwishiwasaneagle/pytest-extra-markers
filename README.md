@@ -6,7 +6,7 @@ A [pytest](https://docs.pytest.org) plugin to dynamically skip tests based on [m
 ## Installation
 
 ```bash
-pip install git+https://github.com/iwishiwasaneagle/pytest-extra-markers@master
+pip install pytest-extra-markers
 ```
 
 ## Usage
@@ -62,4 +62,4 @@ more broad check.
 
 ## Todo
 
-- [ ] Publish to PyPi
+- [x] Publish to PyPi
