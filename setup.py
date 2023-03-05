@@ -1,9 +1,5 @@
 #  Copyright 2023 Jan-Hendrik Ewers
 #  SPDX-License-Identifier: GPL-3.0-only
-"""
-    Setup file for pytest-markers.
-    Use setup.cfg to configure your project.
-"""
 import sys
 
 from distutils.core import setup

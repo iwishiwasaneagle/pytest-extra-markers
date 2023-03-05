@@ -1,8 +1,8 @@
 import pytest
-from extra_markers import O_INT_CLI_FLAG
-from extra_markers import O_S_INT_CLI_FLAG
-from extra_markers import W_INT_CLI_FLAG
-from extra_markers import W_S_INT_CLI_FLAG
+from extra_markers.markers import O_INT_CLI_FLAG
+from extra_markers.markers import O_S_INT_CLI_FLAG
+from extra_markers.markers import W_INT_CLI_FLAG
+from extra_markers.markers import W_S_INT_CLI_FLAG
 
 
 @pytest.mark.parametrize(

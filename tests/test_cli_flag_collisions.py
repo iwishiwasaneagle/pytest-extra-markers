@@ -1,6 +1,6 @@
 import pytest
-from extra_markers import O_INT_CLI_FLAG
-from extra_markers import O_S_INT_CLI_FLAG
+from extra_markers.markers import O_INT_CLI_FLAG
+from extra_markers.markers import O_S_INT_CLI_FLAG
 
 
 @pytest.mark.parametrize("args", [(O_INT_CLI_FLAG, O_S_INT_CLI_FLAG)])

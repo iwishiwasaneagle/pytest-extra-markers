@@ -1,10 +1,10 @@
 import pytest
-from extra_markers import INT_MARKER
-from extra_markers import O_INT_CLI_FLAG
-from extra_markers import O_S_INT_CLI_FLAG
-from extra_markers import S_INT_MARKER
-from extra_markers import W_INT_CLI_FLAG
-from extra_markers import W_S_INT_CLI_FLAG
+from extra_markers.markers import INT_MARKER
+from extra_markers.markers import O_INT_CLI_FLAG
+from extra_markers.markers import O_S_INT_CLI_FLAG
+from extra_markers.markers import S_INT_MARKER
+from extra_markers.markers import W_INT_CLI_FLAG
+from extra_markers.markers import W_S_INT_CLI_FLAG
 
 
 @pytest.fixture
