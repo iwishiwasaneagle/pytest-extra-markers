@@ -18,20 +18,17 @@ import pytest
 
 
 # A
-def test_speedy_unit_test():
-    ...
+def test_speedy_unit_test(): ...
 
 
 # B
 @pytest.mark.integration
-def test_integration_test():
-    ...
+def test_integration_test(): ...
 
 
 # C
 @pytest.mark.slow_integration
-def test_super_slow_integration_test():
-    ...
+def test_super_slow_integration_test(): ...
 ```
 
 You want to quickly run all your quick unit tests before committing. Then, after you are happy that the changes haven't messed up any unit tests you want to run the integration tests, and then after that your *super* slow integration tests. This would look like:
